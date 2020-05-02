@@ -1,0 +1,681 @@
+	
+<!DOCTYPE html>
+<html>
+<head>
+<title> PHIL50 - Introduction to Logic</title>
+<meta charset=utf-8 />
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<link rel="shortcut icon" type="image/png" href="images/icon.png">
+
+<!-- Add in style sheets, libraries and web fonts-->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400|Montserrat+Alternates' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/animate-custom.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
+
+<!-- Add in Modernizr for better cross browser compatibility -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body>
+<div class="top-nav animated fadeInDown">
+	<a href="/" class="home"><i class="fa fa-angle-left spacer"></i> Marcello Di Bello</a>
+	<!--  <div class="important-icons">
+		<a href="mailto:mdibello@stanford.edu" class="mail"><i class="fa fa-envelope-o"></i></a>
+	</div> -->
+</div>
+
+
+
+<section id="content">
+
+
+<div class="container">
+	<h1 class="course-site"> Introduction to Logic</h1>
+	<div class="row">
+		<p class="lead col-xs-10 col-xs-offset-1"> Syntax and semantics of propositional and predicate logic; 
+								modal and inductive logic; some history and philosophy of logic.</p>
+		
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-10 col-xs-offset-1">
+			<div class="row">
+
+<!-- Content within this comment area affects the sidebar -->
+				<div class="col-xs-3">
+					<div class="panel panel-default">
+						<div class="panel-heading class-details">
+							<h3 class="panel-title class-name">PHIL 50 - Spring 2014</h3> 
+							<div>
+								<a href="resources/Syllabus-Phil50-2014.pdf"><i class="fa fa-fw fa-download spacer"></i>Syllabus</a>
+							</div>
+							<div>
+								<a href="http://www.logicinaction.org"><i class="fa fa-fw fa-book spacer"></i>Textbook</a> 
+							</div>
+							<div>
+								<i class="fa fa-fw fa-clock-o spacer"></i>MWF 12:15-1:05 PM
+							</div>
+							<div>
+								<a href="http://campus-map.stanford.edu/?id=01-380&lat=37.4286635156&lng=-122.171327744&zoom=17&srch=380-380w"><i class="fa fa-fw fa-map-marker spacer"></i>RM 380-380W</a> 
+							</div>
+							
+							<h3 class="panel-title class-name">Office Hours</h3> 
+							<div>
+								Adam: W 3-6pm 100-102K
+							</div>
+							<div>
+								Bosco: M 10am-12pm 90-91B
+							</div>
+							<div>
+								Marcello: W 1:30-3pm 90-92EE
+							</div>
+						</div>
+						<ul class="list-group">
+							<li class="list-group-item linkify-title"> Course Topics </li>
+							<li class="list-group-item linkify"><a id="part1Button" href="#">  Propositional Logic</a></li>
+							<li class="list-group-item linkify"><a id="part2Button" href="#">  Predicate Logic </a></li>
+							<li class="list-group-item linkify"><a id="part3Button" href="#" class="last-linkify"> Modal Logic and Probability</a></li>
+						</ul>
+						
+					</div>
+				</div>
+<!-- /Content between these comments area affects the sidebar -->
+
+<!-- Content between these comments area affects the main body -->
+				<div class="col-xs-9">
+					<div class="panel panel-default announcements">
+						<div class="panel-body">
+	<!-- Add/update class announcements in this div -->
+							<h5> Items posted: </h5>  
+							<p> Homework - Week #<a href="resources/Phil50-HW1.pdf"> 1</a>, 
+									     <a href="resources/Phil50-HW1-solutions.pdf"> 1-S</a>, 
+									     <a href="resources/Phil50-HW2.pdf"> 2</a>,  
+									     <a href="resources/Phil50-HW2-solutions.pdf"> 2-S</a>, 
+									     <a href="resources/Phil50-HW3.pdf"> 3</a>,  
+									     <a href="resources/Phil50-HW3-solutions.pdf"> 3-S</a>, 
+									     <a href="resources/Phil50-HW4.pdf"> 4</a>, 
+									     <a href="resources/Phil50-HW4-solutions.pdf"> 4-S</a>, 
+									     <a href="resources/Phil50-midterm-solutions.pdf"> MT-S</a>,  
+									     <a href="resources/Phil50-HW5.pdf"> 5</a>,
+									     <a href="resources/Phil50-HW5-solutions.pdf"> 5-S</a>,
+									     <a href="resources/Phil50-HW6.pdf"> 6</a>,
+									     <a href="resources/Phil50-HW6-solutions.pdf"> 6-S</a>,
+									     <a href="resources/Phil50-HW7.pdf"> 7</a>, 
+									     <a href="resources/Phil50-HW7-solutions.pdf"> 7-S</a>,
+									     <a href="resources/Phil50-HW8.pdf"> 8</a>,
+									     <a href="resources/Phil50-HW8-solutions.pdf"> 8-S</a>,
+									     <a href="resources/Phil50-HW9.pdf"> 9</a>,
+									     <a href="resources/Phil50-HW9-solutions.pdf"> 9-S</a>,
+									     <a href="resources/Phil50-HW10.pdf"> 10</a>,
+									     <a href="resources/Phil50-HW10-solutions.pdf"> 10-S</a>,
+									     <a href="resources/Phil50-final-june6th.pdf"> Final</a>,
+									     <a href="resources/Phil50-final-june6th-solutions.pdf"> Final-S</a>
+							</p>
+							<p> Notes on  <a href="resources/Natural-Deduction.pdf"> Derivations Propositional Logic </a>,
+								      <a href="resources/Natural-Deduction-predicate.pdf"> Derivations Predicate Logic </a>, 
+								      <a href="resources/modal-logic.pdf"> Modal Logic </a>, and
+								      <a href="resources/probability-logic.pdf"> Logic and Probability </a>
+							</p>
+							<p> Slides - Before midterm -
+									   <a href="resources/PHIL50-week1-Mon.pdf"> 1-M</a>, 
+									   <a href="resources/PHIL50-week1-Wed.pdf"> 1-W</a>, 
+									   <a href="resources/PHIL50-week1-Fri.pdf"> 1-F</a>, 
+									   <a href="resources/PHIL50-week2-Mon.pdf"> 2-M</a>, 
+									   <a href="resources/PHIL50-week2-Wed.pdf"> 2-W</a>,  
+									   <a href="resources/PHIL50-week2-Fri.pdf"> 2-F</a>, 
+									   <a href="resources/PHIL50-week3-Mon.pdf"> 3-M</a>,
+									   <a href="resources/PHIL50-week3-Wed.pdf"> 3-W</a>, 
+									   <a href="resources/PHIL50-week3-Fri.pdf"> 3-F</a>, 
+									   <a href="resources/PHIL50-week4-Mon.pdf"> 4-M</a>  
+									   
+						       </p>
+							<p> Midterm Review - <a href="resources/Phil50-midterm.pdf"> Sample Questions</a>, 
+							                     <a href="resources/PHIL50-midterm-review-first.pdf"> Syntax and Semantics</a>,  
+							                     <a href="resources/sample-derivations.pdf"> Sample Derivations</a>, 
+							                     <a href="resources/Derivation-guide.pdf"> Derivation guide</a>
+						       </p>
+							<p> Slides - After midterm -
+									   <a href="resources/PHIL50-week5-Mon.pdf"> 5-M</a>,  
+									   <a href="resources/PHIL50-week5-Wed.pdf"> 5-W</a>, 
+									   <a href="resources/PHIL50-week5-Fri.pdf"> 5-F</a>,
+									   <a href="resources/PHIL50-week6-Mon.pdf"> 6-M</a>,
+									   <a href="resources/PHIL50-week6-Wed.pdf"> 6-W</a>,
+									   <a href="resources/PHIL50-week6-Fri.pdf"> 6-F</a>,
+									   <a href="resources/PHIL50-week7-Mon.pdf"> 7-M</a>,
+									   <a href="resources/PHIL50-week7-Wed.pdf"> 7-W</a>,
+									   <a href="resources/PHIL50-week7-Fri.pdf"> 7-F</a>,
+									   <a href="resources/PHIL50-week8-Mon.pdf"> 8-M</a>,
+									   <a href="resources/PHIL50-week8-Wed.pdf"> 8-W</a>,
+									   <a href="resources/PHIL50-week8-Fri.pdf"> 8-F</a>,
+									   <a href="resources/PHIL50-week9-Wed.pdf"> 9-W</a>
+						       </p>
+						       	<p> Final Review - <a href="resources/Phil50-final.pdf"> First Part</a>,
+						       			   <a href="resources/Phil50-final-second-part.pdf"> Second Part</a>
+							                     
+						       </p>
+						</div>
+					</div> 
+
+	<!-- Content between these comments is for presenting the resources -->
+					<div id="resources">
+
+		<!-- Content between these comments is for 1/16-1/24 -->
+						<div id="part1" class="hidden">
+							<div class="row part-title">
+								<h3>Propositional Logic</h3>
+							</div>
+			<!-- Content betweet these comments should be considered a resource module, they are repeated throughout the resource section. Feel free from (inclusive) the <div> immediately below, down to (inclusive) the </div> immediately above the paired comment below, and reuse throughout this section. I have left the href= path out of most of the <a> elements for the resources. Add in the href= path once you have the names of the documents sorted out and uploaded to the directory of your choice.--> 
+							<div class="row">
+
+				<!-- Content betweent these comments create month/day module -->
+								<div class="col-xs-3 col-md-2">
+									<div class="panel panel-danger">
+									  <div class="panel-heading month">
+									  	<h3 class="panel-title">WEEK 1</h3>
+									  </div>
+									  
+									</div>
+								</div>
+				<!-- /Content betweent these comments create month/day module -->
+
+				<!-- Content betweent these comments create the downloads/readings module -->
+								<div class="col-xs-9 col-md-10">
+									<div class="panel panel-default reading">
+									  <div class="panel-heading">
+									  	<h3 class="panel-title">Preliminaries</h3>
+									  </div>
+									  	<ul class="list-group">
+
+					<!--Use this li to create reading objects -->
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> Slides: <a href="resources/PHIL50-week1-Mon.pdf "> Mon</a>, <a href="resources/PHIL50-week1-Wed.pdf "> Wed</a>, <a href="resources/PHIL50-week1-Fri.pdf "> Fri</a>
+											</li>
+
+					<!--Use this li to create handout/assignment/reading guide objects -->
+											<li class="list-group-item">
+												<a href="resources/Phil50-HW1.pdf"><i class="fa fa-fw fa-file-text-o spacer"></i>Homework 1</a> - <a href="resources/Phil50-HW1-solutions.pdf "> Solutions</a>
+											</li>
+											<!-- <li class="list-group-item">
+												<a href=""><i class="fa fa-fw fa-file-text-o spacer"></i>Reading Guide</a>
+											</li> -->
+										</ul>									  
+									 </div>
+								</div>
+							</div>
+				<!-- /Content betweent these comments create the downloads/readings module -->
+						
+							<div class="row">
+
+				
+								<div class="col-xs-3 col-md-2">
+									<div class="panel panel-danger">
+									  <div class="panel-heading month">
+									  	<h3 class="panel-title">WEEK 2</h3>
+									  </div>
+
+									</div>
+								</div>
+				
+								<div class="col-xs-9 col-md-10">
+									<div class="panel panel-default reading">
+									  <div class="panel-heading">
+									  	<h3 class="panel-title">Syntax and Semantics</h3>
+									  </div>
+									  	<ul class="list-group">
+
+					
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> Slides: <a href="resources/PHIL50-week2-Mon.pdf "> Mon</a>, <a href="resources/PHIL50-week2-Wed.pdf"> Wed</a>,  <a href="resources/PHIL50-week2-Fri.pdf"> Fri</a
+											</li>
+											
+										
+											<li class="list-group-item">
+												<a href="resources/Phil50-HW2.pdf"><i class="fa fa-fw fa-file-text-o spacer"></i>Homework 2</a> - <a href="resources/Phil50-HW2-solutions.pdf "> Solutions</a>
+											</li>
+											<!-- <li class="list-group-item">
+												<a href=""><i class="fa fa-fw fa-file-text-o spacer"></i>Reading Guide</a>
+											</li> -->
+										</ul>									  
+									 </div>
+								</div>
+							</div>
+				
+							<div class="row">
+
+				
+								<div class="col-xs-3 col-md-2">
+									<div class="panel panel-danger">
+									  <div class="panel-heading month">
+									  	<h3 class="panel-title">WEEK 3</h3>
+									  </div>
+
+									</div>
+								</div>
+				
+								<div class="col-xs-9 col-md-10">
+									<div class="panel panel-default reading">
+									  <div class="panel-heading">
+									  	<h3 class="panel-title">Derivations</h3>
+									  </div>
+									  	<ul class="list-group">
+
+					
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> Slides: <a href="resources/PHIL50-week3-Mon.pdf "> Mon</a>, <a href="resources/PHIL50-week3-Wed.pdf "> Wed</a>, <a href="resources/PHIL50-week3-Fri.pdf "> Fri</a>
+											</li>
+											
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> Notes: <a href="resources/Natural-Deduction.pdf "> Derivations </a>
+											</li>
+
+					
+											<li class="list-group-item">
+												<a href="resources/Phil50-HW3.pdf"><i class="fa fa-fw fa-file-text-o spacer"></i>Homework 3</a> - <a href="resources/Phil50-HW3-solutions.pdf "> Solutions</a>
+											</li>
+											
+																					<!-- <li class="list-group-item">
+											<a href=""><i class="fa fa-fw fa-file-text-o spacer"></i>Reading Guide</a>
+											</li> -->
+										</ul>									  
+									 </div>
+								</div>
+							</div>
+							
+							<div class="row">
+							
+							<div class="col-xs-3 col-md-2">
+									<div class="panel panel-danger">
+									  <div class="panel-heading month">
+									  	<h3 class="panel-title">REVIEW</h3>
+									  </div>
+
+									</div>
+								</div>
+				
+								<div class="col-xs-9 col-md-10">
+									<div class="panel panel-default reading">
+									  <div class="panel-heading">
+									  	<h3 class="panel-title">Midterm Material</h3>
+									  </div>
+									  	<ul class="list-group">
+
+					
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> Slides: <a href="resources/PHIL50-midterm-review-first.pdf "> Syntax and Semantics</a>
+											</li>
+											
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> <a href="resources/Phil50-midterm.pdf "> Sample Questions </a>
+											</li>
+											
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> <a href="resources/sample-derivations.pdf "> Sample Derivations </a>
+											</li>
+											
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> <a href="resources/Derivation-guide.pdf "> Derivation Guide </a>
+											</li>
+											
+											<li class="list-group-item">
+												<a href="resources/Phil50-midterm-solutions.pdf "><i class="fa fa-fw fa-file-text-o spacer"></i> Mideterm Exam Solutions </a>
+											</li>
+
+										</ul>									  
+									 </div>
+								</div>
+							</div>
+							
+							<div class="row">
+
+				
+								<div class="col-xs-3 col-md-2">
+									<div class="panel panel-danger">
+									  <div class="panel-heading month">
+									  	<h3 class="panel-title">WEEK 4</h3>
+									  </div>
+
+									</div>
+								</div>
+				
+								<div class="col-xs-9 col-md-10">
+									<div class="panel panel-default reading">
+									  <div class="panel-heading">
+									  	<h3 class="panel-title">Soundness, Completenes, Review</h3>
+									  </div>
+									  	<ul class="list-group">
+
+					
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> Slides: <a href="resources/PHIL50-week4-Mon.pdf "> Mon</a>
+											</li>
+
+					
+											<li class="list-group-item">
+												<a href="resources/Phil50-HW4.pdf"><i class="fa fa-fw fa-file-text-o spacer"></i>Homework 4</a> - <a href="resources/Phil50-HW4-solutions.pdf "> Solutions</a>
+											</li>
+											<!-- <li class="list-group-item">
+												<a href=""><i class="fa fa-fw fa-file-text-o spacer"></i>Reading Guide</a>
+											</li> -->
+										</ul>									  
+									 </div>
+								</div>
+							</div>
+
+			<!-- /Content betweet these comments should be considered a resource module, they are repeated throughout the resource section. Feel free from (inclusive) the </div> immediately above, up to (inclusive) the <div> immediately below the paired comment above, and reuse throughout this section. --> 
+							
+						</div>
+		<!-- /Content between these comments is for 1/16-1/24 -->
+
+		<!-- Content between these comments is for 1/31-2/21 -->
+
+						<div id="part2" class="hidden">
+							<div class="row part-title">
+								<h3>Predicate Logic</h3>
+							</div>
+							
+							<div class="row">
+
+				
+								<div class="col-xs-3 col-md-2">
+									<div class="panel panel-danger">
+									  <div class="panel-heading month">
+									  	<h3 class="panel-title">WEEK 5</h3>
+									  </div>
+
+									</div>
+								</div>
+				
+								<div class="col-xs-9 col-md-10">
+									<div class="panel panel-default reading">
+									  <div class="panel-heading">
+									  	<h3 class="panel-title">Syllogistic Logic</h3>
+									  </div>
+									  	<ul class="list-group">
+
+					
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> Slides: <a href="resources/PHIL50-week5-Mon.pdf"> Mon</a>, <a href="resources/PHIL50-week5-Wed.pdf"> Wed</a>, <a href="resources/PHIL50-week5-Fri.pdf"> Fri</a>
+											</li>
+
+					
+											<li class="list-group-item">
+												<a href="resources/Phil50-HW5.pdf"><i class="fa fa-fw fa-file-text-o spacer"></i>Homework 5</a>  - <a href="resources/Phil50-HW5-solutions.pdf "> Solutions</a>
+											</li>
+											<!-- <li class="list-group-item">
+												<a href=""><i class="fa fa-fw fa-file-text-o spacer"></i>Reading Guide</a>
+											</li> -->
+										</ul>									  
+									 </div>
+								</div>
+							</div>
+							
+							<div class="row">
+
+				
+								<div class="col-xs-3 col-md-2">
+									<div class="panel panel-danger">
+									  <div class="panel-heading month">
+									  	<h3 class="panel-title">WEEK 6</h3>
+									  </div>
+
+									</div>
+								</div>
+				
+								<div class="col-xs-9 col-md-10">
+									<div class="panel panel-default reading">
+									  <div class="panel-heading">
+									  	<h3 class="panel-title">Translations</h3>
+									  </div>
+									  	<ul class="list-group">
+
+					
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> Slides: <a href="resources/PHIL50-week6-Mon.pdf"> Mon</a>, <a href="resources/PHIL50-week6-Wed.pdf"> Wed</a>,  <a href="resources/PHIL50-week6-Fri.pdf"> Fri</a>
+											</li>
+
+					
+											<li class="list-group-item">
+												<a href="resources/Phil50-HW6.pdf"><i class="fa fa-fw fa-file-text-o spacer"></i>Homework 6</a> - <a href="resources/Phil50-HW6-solutions.pdf "> Solutions</a>
+											</li>
+											<!-- <li class="list-group-item">
+												<a href=""><i class="fa fa-fw fa-file-text-o spacer"></i>Reading Guide</a>
+											</li> -->
+										</ul>									  
+									 </div>
+								</div>
+							</div>
+							
+							<div class="row">
+
+				
+								<div class="col-xs-3 col-md-2">
+									<div class="panel panel-danger">
+									  <div class="panel-heading month">
+									  	<h3 class="panel-title">WEEK 7</h3>
+									  </div>
+
+									</div>
+								</div>
+				
+								<div class="col-xs-9 col-md-10">
+									<div class="panel panel-default reading">
+									  <div class="panel-heading">
+									  	<h3 class="panel-title">Syntax and Semantics</h3>
+									  </div>
+									  	<ul class="list-group">
+
+					
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> Slides: <a href="resources/PHIL50-week7-Mon.pdf"> Mon</a>, <a href="resources/PHIL50-week7-Wed.pdf"> Wed</a>, <a href="resources/PHIL50-week7-Fri.pdf"> Fri</a>
+											</li>
+
+					
+											<li class="list-group-item">
+												<a href="resources/Phil50-HW7.pdf"><i class="fa fa-fw fa-file-text-o spacer"></i>Homework 7</a>  - <a href="resources/Phil50-HW7-solutions.pdf "> Solutions</a>
+											</li>
+											<!-- <li class="list-group-item">
+												<a href=""><i class="fa fa-fw fa-file-text-o spacer"></i>Reading Guide</a>
+											</li> -->
+										</ul>									  
+									 </div>
+								</div>
+							</div>
+							
+							<div class="row">
+
+				
+								<div class="col-xs-3 col-md-2">
+									<div class="panel panel-danger">
+									  <div class="panel-heading month">
+									  	<h3 class="panel-title">WEEK 8</h3>
+									  </div>
+
+									</div>
+								</div>
+				
+								<div class="col-xs-9 col-md-10">
+									<div class="panel panel-default reading">
+									  <div class="panel-heading">
+									  	<h3 class="panel-title">Derivations</h3>
+									  </div>
+									  	<ul class="list-group">
+
+					
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> Slides: <a href="resources/PHIL50-week8-Mon.pdf"> Mon</a>, <a href="resources/PHIL50-week8-Wed.pdf"> Wed</a>, <a href="resources/PHIL50-week8-Fri.pdf"> Fri</a>
+											</li>
+											
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> Notes: <a href="resources/Natural-Deduction-predicate.pdf "> Derivations in Predicate Logic </a>
+											</li>
+
+					
+											<li class="list-group-item">
+												<a href="resources/Phil50-HW8.pdf"><i class="fa fa-fw fa-file-text-o spacer"></i>Homework 8</a> - <a href="resources/Phil50-HW8-solutions.pdf "> Solutions</a>
+											</li>
+											<!-- <li class="list-group-item">
+												<a href=""><i class="fa fa-fw fa-file-text-o spacer"></i>Reading Guide</a>
+											</li> -->
+										</ul>									  
+									 </div>
+								</div>
+							</div>
+						</div>
+		<!-- /Content between these comments is for 1/31-2/21 -->
+
+		<!-- Content between these comments is for 2/28-3/14 -->
+						<div id="part3" class="hidden">
+							<div class="row part-title">
+								<h3>Modal Logic and Probability</h3>
+							</div>
+							<div class="row">
+
+				
+								<div class="col-xs-3 col-md-2">
+									<div class="panel panel-danger">
+									  <div class="panel-heading month">
+									  	<h3 class="panel-title">WEEK 9</h3>
+									  </div>
+
+									</div>
+								</div>
+				
+								<div class="col-xs-9 col-md-10">
+									<div class="panel panel-default reading">
+									  <div class="panel-heading">
+									  	<h3 class="panel-title"> Modal Logic</h3>
+									  </div>
+									  	<ul class="list-group">
+
+					
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> Slides: <a href="resources/PHIL50-week9-Wed.pdf"> Wed</a>
+											</li>
+											
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> Notes: <a href="resources/modal-logic.pdf "> Modal Logic </a>
+											</li>
+											
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i>  <a href="http://www.nytimes.com/2012/03/14/us/ruth-barcan-marcus-philosopher-logician-dies-at-90.html?_r=0"> The NY Times on Ruth Barcan Marcus </a>
+											</li>
+
+					
+											<li class="list-group-item">
+												<a href="resources/Phil50-HW9.pdf"><i class="fa fa-fw fa-file-text-o spacer"></i>Homework 9</a> - <a href="resources/Phil50-HW9-solutions.pdf "> Solutions</a>
+											</li>
+											<!-- <li class="list-group-item">
+												<a href=""><i class="fa fa-fw fa-file-text-o spacer"></i>Reading Guide</a>
+											</li> -->
+										</ul>									  
+									 </div>
+								</div>
+							</div>
+							
+							<div class="row">
+
+				
+								<div class="col-xs-3 col-md-2">
+									<div class="panel panel-danger">
+									  <div class="panel-heading month">
+									  	<h3 class="panel-title">WEEK 10</h3>
+									  </div>
+
+									</div>
+								</div>
+				
+								<div class="col-xs-9 col-md-10">
+									<div class="panel panel-default reading">
+									  <div class="panel-heading">
+									  	<h3 class="panel-title"> Logic and Probability</h3>
+									  </div>
+									  	<ul class="list-group">
+
+					
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> Notes: <a href="resources/probability-logic.pdf "> Probability and Logic </a>
+											</li>
+
+					
+											<li class="list-group-item">
+												<a href="resources/Phil50-HW10.pdf"><i class="fa fa-fw fa-file-text-o spacer"></i>Homework 10</a> -  - <a href="resources/Phil50-HW10-solutions.pdf "> Solutions</a>
+											</li>
+											<!-- <li class="list-group-item">
+												<a href=""><i class="fa fa-fw fa-file-text-o spacer"></i>Reading Guide</a>
+											</li> -->
+										</ul>									  
+									 </div>
+								</div>
+							</div>
+							
+								<div class="row">
+							
+							<div class="col-xs-3 col-md-2">
+									<div class="panel panel-danger">
+									  <div class="panel-heading month">
+									  	<h3 class="panel-title">FINAL REVIEW</h3>
+									  </div>
+
+									</div>
+								</div>
+				
+								<div class="col-xs-9 col-md-10">
+									<div class="panel panel-default reading">
+									  <div class="panel-heading">
+									  	<h3 class="panel-title"> Preparation Material</h3>
+									  </div>
+									  	<ul class="list-group">
+
+					
+											<li class="list-group-item">
+												<i class="fa fa-fw fa-book spacer"></i> <a href="resources/Phil50-final.pdf "> First Part </a> - <a href="resources/Phil50-final-second-part.pdf "> Second Part </a>
+											</li>
+											<li class="list-group-item">
+												<a href="resources/Phil50-final-june6th-solutions.pdf "><i class="fa fa-fw fa-file-text-o spacer"></i> Final Exam Solutions </a>
+											</li>
+											
+										</ul>									  
+									 </div>
+								</div>
+							</div>
+						</div>
+		<!-- /Content between these comments is for 2/28-3/14 -->
+
+					</div>
+	<!-- Content between these comments is for presenting the resources -->
+
+				</div>
+<!-- /Content between these comments area affects the main body -->
+
+			</div>
+		</div>
+	</div>
+</div>
+
+</section>
+<!-- Add JavaScript files/links/libraries below -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48905063-1', 'marcellodibello.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
